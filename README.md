@@ -32,3 +32,5 @@ ORCID: [0000-0003-0402-2779](https://orcid.org/0000-0003-0402-2779)
 
 * [SLURM at Fred Hutch](https://sciwiki.fredhutch.org/scicomputing/compute_jobs/)
 * [SLURM SBATCH commands](https://slurm.schedmd.com/sbatch.html)
+* [Rclone at Fred Hutch](https://sciwiki.fredhutch.org/compdemos/Economy-storage/#rclone)
+* [AWS S3 at Fred Hutch](https://sciwiki.fredhutch.org/compdemos/Economy-storage/#amazon-web-services-s3-compatibility-layer)
