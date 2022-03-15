@@ -10,6 +10,20 @@ Rclone must be configured to include the BCCA FTP username and password on the c
 
 Once that is completed, update the SBATCH array size to be the number of files hosted on the BCCA FTP server, for example this line `#SBATCH --array=1-2130%10` defines that there will be 2,130 jobs submitted to the Gizmos, and 10 jobs will be allowed to run at a time. For more details on SLURM job scheduler and job arrays can be found in the references.
 
+#### AWS S3 Bucket 
+
+Examples of copying and downloading data from the Meshinchi Lab S3 Bucket can be found at: 
+* file_renaming/AWS_S3_Example_Commands.sh
+* sbatch_job_scripts/Upload_Rename_Fastqs_S3.sh
+* sbatch_job_scripts/Upload_Rename_MD5check_S3.sh
+* sbatch_job_scripts/Upload_Rename_S3.sh
+* sbatch_job_scripts/Upload_S3.sh
+* sbatch_job_scripts/Upload_S3Bucket_to_S3Bucket.sh
+* sbatch_job_scripts/Upload_and_MD5Check_S3.sh
+
+It may also be beneficial to configure [Rclone to connect to AWS S3](https://rclone.org/s3/), or to use the [Boto3](https://aws.amazon.com/sdk-for-python/) python package. 
+
+
 Author: Jenny Leopoldina Smith<br>
 ORCID: [0000-0003-0402-2779](https://orcid.org/0000-0003-0402-2779)
 <br>
