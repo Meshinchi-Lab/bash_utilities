@@ -23,7 +23,6 @@ rclone config
 
 Once that is completed, update the SBATCH array size in `sbatch_job_scripts/rclone_bcgsc_download.sh` to be the number of files hosted on the BCCA FTP server, for example this line `#SBATCH --array=1-2130%10` defines that there will be 2,130 jobs submitted to the Gizmos, and 10 jobs will be allowed to run at a time. For more details on SLURM job scheduler and job arrays can be found in the references.
 
-Then follow the prompts 
 
 #### AWS S3 Bucket 
 
