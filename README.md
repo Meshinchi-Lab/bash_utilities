@@ -4,11 +4,26 @@ Including file renaming, and running data processing on the HPC using SLURM job 
 
 
 #### BCCA Downloads
+
 For BCCA Downloads from the FTP site use the bash script `sbatch_job_scripts/rclone_bcgsc_download.sh`. 
 
-Rclone must be configured to include the BCCA FTP username and password on the command line prior to use this script. The instructions to configure the Rclone to connect to an FTP site are found at this [link](https://rclone.org/ftp/). 
+Rclone must be configured to include the BCCA FTP username and password on the command line prior to use this script. The instructions to configure the Rclone to connect to an FTP site are found at this [link](https://rclone.org/ftp/). An example is below of the BCCA Credentials to include in the Rclone config step. The username and password will be emailed from BCCA to retrieve the data. 
 
-Once that is completed, update the SBATCH array size to be the number of files hosted on the BCCA FTP server, for example this line `#SBATCH --array=1-2130%10` defines that there will be 2,130 jobs submitted to the Gizmos, and 10 jobs will be allowed to run at a time. For more details on SLURM job scheduler and job arrays can be found in the references.
+SERVER: servername.bcgsc.ca
+PROTOCOL: SFTP (SSH File Transfer Protocol)
+USERNAME: DATA-000
+PASSWORD: ABCdefGHI
+DIRECTORY: /DIR_NAME/
+
+On the commandline, you can interactively add username, password, and FTP server from the email.  Follow the initial prompts based on the documentation in the rclone website. When prompted for `host` enter `servername.bcgsc.ca`, `user` enter `DATA-000`, and `FTP password` enter `ABCdefGHI`. All other prompts, use the default. 
+
+```
+rclone config
+```
+
+Once that is completed, update the SBATCH array size in `sbatch_job_scripts/rclone_bcgsc_download.sh` to be the number of files hosted on the BCCA FTP server, for example this line `#SBATCH --array=1-2130%10` defines that there will be 2,130 jobs submitted to the Gizmos, and 10 jobs will be allowed to run at a time. For more details on SLURM job scheduler and job arrays can be found in the references.
+
+Then follow the prompts 
 
 #### AWS S3 Bucket 
 
