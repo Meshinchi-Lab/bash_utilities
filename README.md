@@ -9,11 +9,11 @@ For BCCA Downloads from the FTP site use the bash script `sbatch_job_scripts/rcl
 
 Rclone must be configured to include the BCCA FTP username and password on the command line prior to use this script. The instructions to configure the Rclone to connect to an FTP site are found at this [link](https://rclone.org/ftp/). An example is below of the BCCA Credentials to include in the Rclone config step. The username and password will be emailed from BCCA to retrieve the data. 
 
-SERVER: servername.bcgsc.ca
-PROTOCOL: SFTP (SSH File Transfer Protocol)
-USERNAME: DATA-000
-PASSWORD: ABCdefGHI
-DIRECTORY: /DIR_NAME/
+SERVER: servername.bcgsc.ca<br>
+PROTOCOL: SFTP (SSH File Transfer Protocol)<br>
+USERNAME: DATA-000<br>
+PASSWORD: ABCdefGHI<br>
+DIRECTORY: /DIR_NAME/<br>
 
 On the commandline, you can interactively add username, password, and FTP server from the email.  Follow the initial prompts based on the documentation in the rclone website. When prompted for `host` enter `servername.bcgsc.ca`, `user` enter `DATA-000`, and `FTP password` enter `ABCdefGHI`. All other prompts, use the default. 
 
